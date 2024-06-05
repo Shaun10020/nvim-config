@@ -21,6 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
         { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},},
 
+        { "folke/which-key.nvim", event = "VeryLazy", init = function() vim.o.timeout = true vim.o.timeoutlen=300 end, opts = {},},
+
         { 'nvim-telescope/telescope.nvim', tag = '0.1.6',dependencies = { 'nvim-lua/plenary.nvim'}},
 
         { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
@@ -105,7 +107,8 @@ local plugins = {
 
     -- Install DAP
 		{ 'mfussenegger/nvim-dap'},
-		{ "jay-babu/mason-nvim-dap.nvim"}
+		{ "jay-babu/mason-nvim-dap.nvim"},
+		{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
