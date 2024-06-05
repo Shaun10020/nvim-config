@@ -41,8 +41,6 @@ local plugins = {
 
         { 'tpope/vim-fugitive'},
 
-		{ "kylechui/nvim-surround", version = "*", event = "VeryLazy", config = function() require("nvim-surround").setup({})end },
-
         {'akinsho/toggleterm.nvim', version = "*", config = true},
 
         {'lukas-reineke/indent-blankline.nvim'},
