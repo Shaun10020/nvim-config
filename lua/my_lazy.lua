@@ -37,6 +37,8 @@ local plugins = {
 
         { 'mhinz/vim-startify' },
 
+        { 'windwp/nvim-autopairs', event = "InsertEnter" , config = true},
+
         { 'lewis6991/gitsigns.nvim' },
 
         { 'tpope/vim-fugitive'},
