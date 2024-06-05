@@ -1,0 +1,5 @@
+vim.keymap.set('n','<leader>gfa', function() vim.cmd("Git add .") end)
+vim.keymap.set('n','<leader>gfs', function() vim.cmd("Git push") end)
+vim.keymap.set('n','<leader>gfl', function() vim.cmd("Git pull") end)
+vim.keymap.set('n','<leader>gfb', function() vim.cmd("Git blame") end)
+vim.keymap.set('n','<leader>gfc', function() vim.cmd("Git commit --no-message") end)
