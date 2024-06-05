@@ -31,15 +31,18 @@ local plugins = {
         { 'lewis6991/gitsigns.nvim' },
         { 'tpope/vim-fugitive'},
 		{ "kylechui/nvim-surround", version = "*", event = "VeryLazy", config = function() require("nvim-surround").setup({})end },
-		{ "folke/trouble.nvim", keys = {
-            { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)" },
-            { "<leader>xX",  "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer Diagnostics (Trouble)" },
-            { "<leader>cs", "<cmd>Trouble symbols toggle focus=false<cr>", desc = "Symbols (Trouble)",},
-            { "<leader>cl", "<cmd>Trouble lsp toggle focus=false win.position=right<cr>", desc = "LSP Definitions / references / ... (Trouble)", },
-            { "<leader>xL", "<cmd>Trouble loclist toggle<cr>", desc = "Location List (Trouble)" },
-            { "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", desc = "Quickfix List (Trouble)" }}, opts = {},},
   	    {'akinsho/toggleterm.nvim', version = "*", config = true},
         {'lukas-reineke/indent-blankline.nvim'},
+        { "folke/noice.nvim", event = "VeryLazy",opts = {},
+			dependencies = {
+    		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    		"MunifTanjim/nui.nvim",
+    		-- OPTIONAL:
+    		--   `nvim-notify` is only needed, if you want to use the notification view.
+    		--   If not available, we use `mini` as the fallback
+    		"rcarriga/nvim-notify",
+    		}
+		},
 
 
 		-- Install LSP-zero
