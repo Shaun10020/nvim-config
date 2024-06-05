@@ -20,30 +20,74 @@ vim.opt.rtp:prepend(lazypath)
 --
 local plugins = {
         { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},},
-        { 'nvim-telescope/telescope.nvim', tag = '0.1.6',dependencies = { 'nvim-lua/plenary.nvim'}},
-        { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-        { "stevearc/oil.nvim" },
-        { 'chrisbra/csv.vim' },
-	 	{ 'nvim-lualine/lualine.nvim',dependencies = { 'nvim-tree/nvim-web-devicons' } },
-		{ 'petertriho/cmp-git' },
-        { 'ThePrimeagen/harpoon' },
-        { 'mhinz/vim-startify' },
-        { 'lewis6991/gitsigns.nvim' },
-        { 'tpope/vim-fugitive'},
-		{ "kylechui/nvim-surround", version = "*", event = "VeryLazy", config = function() require("nvim-surround").setup({})end },
-  	    {'akinsho/toggleterm.nvim', version = "*", config = true},
-        {'lukas-reineke/indent-blankline.nvim'},
-        { "folke/noice.nvim", event = "VeryLazy",opts = {},
-			dependencies = {
-    		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-    		"MunifTanjim/nui.nvim",
-    		-- OPTIONAL:
-    		--   `nvim-notify` is only needed, if you want to use the notification view.
-    		--   If not available, we use `mini` as the fallback
-    		"rcarriga/nvim-notify",
-    		}
-		},
 
+        { 'nvim-telescope/telescope.nvim', tag = '0.1.6',dependencies = { 'nvim-lua/plenary.nvim'}},
+
+        { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+
+        { "stevearc/oil.nvim" },
+
+        { 'chrisbra/csv.vim' },
+
+		{ 'nvim-lualine/lualine.nvim',dependencies = { 'nvim-tree/nvim-web-devicons' } },
+
+		{ 'petertriho/cmp-git' },
+
+        { 'ThePrimeagen/harpoon' },
+
+        { 'mhinz/vim-startify' },
+
+        { 'lewis6991/gitsigns.nvim' },
+
+        { 'tpope/vim-fugitive'},
+
+		{ "kylechui/nvim-surround", version = "*", event = "VeryLazy", config = function() require("nvim-surround").setup({})end },
+
+        {'akinsho/toggleterm.nvim', version = "*", config = true},
+
+        {'lukas-reineke/indent-blankline.nvim'},
+
+        { "folke/noice.nvim", event = "VeryLazy",opts = {}, dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify",}},
+
+		{ "L3MON4D3/LuaSnip", version = "v2.*",  build = "make install_jsregexp"},
+		
+		{
+		  "folke/trouble.nvim",
+		  opts = {}, -- for default options, refer to the configuration section for custom setup.
+		  cmd = "Trouble",
+		  keys = {
+			{
+			  "<leader>xx",
+			  "<cmd>Trouble diagnostics toggle<cr>",
+			  desc = "Diagnostics (Trouble)",
+			},
+			{
+			  "<leader>xX",
+			  "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+			  desc = "Buffer Diagnostics (Trouble)",
+			},
+			{
+			  "<leader>xs",
+			  "<cmd>Trouble symbols toggle focus=false<cr>",
+			  desc = "Symbols (Trouble)",
+			},
+			{
+			  "<leader>xl",
+			  "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+			  desc = "LSP Definitions / references / ... (Trouble)",
+			},
+			{
+			  "<leader>xL",
+			  "<cmd>Trouble loclist toggle<cr>",
+			  desc = "Location List (Trouble)",
+			},
+			{
+			  "<leader>xQ",
+			  "<cmd>Trouble qflist toggle<cr>",
+			  desc = "Quickfix List (Trouble)",
+			},
+		  },
+		},
 
 		-- Install LSP-zero
 		{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},

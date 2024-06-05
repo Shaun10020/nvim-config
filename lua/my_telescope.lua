@@ -42,3 +42,5 @@ vim.keymap.set('n','<leader>fr',builtin.registers,{})
 vim.keymap.set('n','<leader>fk',builtin.keymaps,{})
 vim.keymap.set('n','<leader>ft',builtin.treesitter,{})
 vim.keymap.set('n','<leader>fb',builtin.buffers,{})
+vim.keymap.set('n','<leader>fn',function() vim.cmd("Noice telescope") end,{})
+
