@@ -54,7 +54,7 @@ local plugins = {
         { "folke/noice.nvim", event = "VeryLazy",opts = {}, dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify",}},
 
 		{ "L3MON4D3/LuaSnip", version = "v2.*",  build = "make install_jsregexp"},
-		
+
 		{
 		  "folke/trouble.nvim",
 		  opts = {}, -- for default options, refer to the configuration section for custom setup.
@@ -109,7 +109,6 @@ local plugins = {
 
     -- Install DAP
 		{ 'mfussenegger/nvim-dap'},
-		{ "jay-babu/mason-nvim-dap.nvim"},
 		{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 }
 local opts = {}
