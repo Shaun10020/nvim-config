@@ -17,3 +17,25 @@ vim.keymap.set('n','<F5>',function() require("dap").repl.toggle() end)
 vim.keymap.set('n','<F6>',function() require('dapui').toggle() end)
 vim.keymap.set('n','<F7>',function() require('dap.ui.widgets').hover() end)
 
+require ('mason-nvim-dap').setup({
+    ensure_installed = {'python'},
+    handlers = {
+        function(config)
+          -- all sources with no handler get passed here
+
+          -- Keep original functionality
+          require('mason-nvim-dap').default_setup(config)
+        end,
+        python = function(config)
+            config.adapters = {
+	            type = "executable",
+	            command = "python",
+	            args = {
+		            "-m",
+		            "debugpy.adapter",
+	            },
+            }
+            require('mason-nvim-dap').default_setup(config) -- don't forget this!
+        end,
+    },
+})

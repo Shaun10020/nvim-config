@@ -106,6 +106,7 @@ local plugins = {
 		-- Install Mason 
 		{"williamboman/mason.nvim"},
         {"williamboman/mason-lspconfig.nvim"},
+        {"jay-babu/mason-nvim-dap.nvim"},
 
     -- Install DAP
 		{ 'mfussenegger/nvim-dap'},
