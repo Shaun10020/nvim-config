@@ -21,6 +21,8 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
         { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {},},
 
+        { "folke/drop.nvim", event = "VimEnter"},
+
         { "folke/which-key.nvim", event = "VeryLazy", init = function() vim.o.timeout = true vim.o.timeoutlen=300 end, opts = {},},
 
         { 'nvim-telescope/telescope.nvim', tag = '0.1.6',dependencies = { 'nvim-lua/plenary.nvim'}},
