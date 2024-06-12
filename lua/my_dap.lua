@@ -39,3 +39,5 @@ require ('mason-nvim-dap').setup({
         end,
     },
 })
+
+require('dap-python').setup('python')

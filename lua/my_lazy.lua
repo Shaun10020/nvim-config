@@ -33,6 +33,8 @@ local plugins = {
 
         { 'chrisbra/csv.vim' },
 
+        { "tris203/precognition.nvim" },
+
 		{ 'nvim-lualine/lualine.nvim',dependencies = { 'nvim-tree/nvim-web-devicons' } },
 
 		{ 'petertriho/cmp-git' },
@@ -110,6 +112,7 @@ local plugins = {
 
     -- Install DAP
 		{ 'mfussenegger/nvim-dap'},
+		{ 'mfussenegger/nvim-dap-python'},
 		{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 }
 local opts = {}
