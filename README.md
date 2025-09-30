@@ -22,3 +22,8 @@ export PATH="$PATH:nvim-linux-x86_64/bin"
 ```
 ~/.config/nvim/init.lua
 ```
+
+## Linux Install packed font instruction
+1. Create director ```.fonts``` at ```~```
+2. Copy the desired ```.ttf``` file at the folder
+3. Run ```fc-cache -fv ~/.fonts``` to update font cache
