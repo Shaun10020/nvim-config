@@ -25,5 +25,5 @@ export PATH="$PATH:nvim-linux-x86_64/bin"
 
 ## Linux Install packed font instruction
 1. Create director ```.fonts``` at ```~```
-2. Copy the desired ```.ttf``` file at the folder
+2. Copy the ```.ttf``` files at the folder
 3. Run ```fc-cache -fv ~/.fonts``` to update font cache
