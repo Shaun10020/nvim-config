@@ -17,3 +17,8 @@ Then add this to your shell config (~/.bashrc, ~/.zshrc, ...):
 ```
 export PATH="$PATH:nvim-linux-x86_64/bin"
 ```
+
+## Linux config location
+```
+~/.config/nvim/init.lua
+```
