@@ -11,6 +11,7 @@ require('my_gitsigns')
 require('my_toggleterm')
 require('my_harpoon')
 require('my_ibl')
+require('my_wk')
 require('my_lualine') -- Give more info at the line bar
 require('my_noice')
 require('my_drop') -- Computer Idle Animation

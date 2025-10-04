@@ -1,6 +1,7 @@
 --
 -- This installs lazy nvim
 --
+-- Use ```:Lazy` to open Lazy Manager UI
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -113,6 +114,7 @@ local plugins = {
     -- Install DAP
 		{ 'mfussenegger/nvim-dap'},
 		{ 'mfussenegger/nvim-dap-python'},
+        { 'leoluz/nvim-dap-go'},
 		{ "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
 }
 local opts = {}
